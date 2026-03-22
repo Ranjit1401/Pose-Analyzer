@@ -1,7 +1,8 @@
 import cv2
 import mediapipe as mp
+from mediapipe import solutions
 
-mp_pose = mp.solutions.pose
+mp_pose = solutions.pose
 pose = mp_pose.Pose(static_image_mode=False)
 
 def detect_landmarks(image):
