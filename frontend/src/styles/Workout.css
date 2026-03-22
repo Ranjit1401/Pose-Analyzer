@@ -1,0 +1,499 @@
+/* ============================= */
+/* WORKOUT WRAPPER */
+/* ============================= */
+
+.workout-wrapper {
+  padding: 120px 80px;
+  color: white;
+  min-height: 100vh;
+}
+
+/* ============================= */
+/* HEADER */
+/* ============================= */
+
+.workout-header {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.back-btn {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  border-radius: 10px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  white-space: nowrap;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.back-btn:hover {
+  background: rgba(82, 39, 255, 0.35);
+  border-color: #7a4aff;
+}
+
+.header-title {
+  flex: 1;
+}
+
+/* ============================= */
+/* GRID */
+/* ============================= */
+
+.workout-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: stretch;
+}
+
+/* ============================= */
+/* CAMERA + VIDEO SECTION BOX */
+/* ============================= */
+
+.camera-section,
+.video-section {
+  background: rgba(20, 10, 40, 0.95);
+  padding: 0;
+  border-radius: 20px;
+  height: 460px;
+  box-shadow: 0 0 30px rgba(82, 39, 255, 0.25);
+  overflow: hidden;
+  position: relative;
+}
+
+/* ============================= */
+/* CAMERA LAYOUT (Camera + Stats) */
+/* ============================= */
+
+.camera-section {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  height: 460px;
+}
+
+/* ============================= */
+/* AI CAMERA WRAPPER */
+/* ============================= */
+
+.ai-camera-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+/* Fullscreen mode */
+.ai-camera-fullscreen {
+  background: #000;
+}
+
+.ai-camera-fullscreen .ai-camera-video {
+  border-radius: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Fullscreen button */
+.fullscreen-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 20;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+  backdrop-filter: blur(4px);
+}
+
+.fullscreen-btn:hover {
+  background: rgba(82,39,255,0.6);
+  border-color: #7a4aff;
+}
+
+/* ============================= */
+/* AI OVERLAY (stats on camera)  */
+/* ============================= */
+
+.ai-overlay {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.65);
+  border: 1px solid rgba(120, 80, 255, 0.5);
+  border-radius: 12px;
+  padding: 12px 16px;
+  min-width: 160px;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #fff;
+  backdrop-filter: blur(6px);
+}
+
+.ai-overlay h3 {
+  font-size: 13px;
+  margin-bottom: 8px;
+  color: #a78bfa;
+}
+
+.ai-overlay p {
+  margin: 2px 0;
+}
+
+
+
+/* ============================= */
+/* CAMERA CANVAS */
+/* ============================= */
+
+.ai-camera-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+  background: black;
+  display: block;
+}
+/* ============================= */
+/* VIDEO ELEMENT */
+/* ============================= */
+
+.exercise-video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: black;
+  border-radius: 14px;
+  display: block;
+}
+
+/* ============================= */
+/* AI STATS PANEL */
+/* ============================= */
+
+.ai-stats {
+  flex: 1;
+  min-width: 280px;     /* prevent shrinking */
+  max-width: 320px;
+
+  font-size: 14px;
+  line-height: 1.8;
+  color: white;
+
+  background: rgba(0, 0, 0, 0.4);
+  padding: 22px;
+  border-radius: 16px;
+}
+.ai-stats h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #7a4aff;
+}
+
+.ai-stats p {
+  margin: 6px 0;
+}
+
+
+/* ============================= */
+/* CONTROLS PANEL */
+/* ============================= */
+
+.controls-panel {
+  margin-top: 40px;
+  background: rgba(20, 10, 40, 0.95);
+  padding: 25px;
+  border-radius: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 25px rgba(82, 39, 255, 0.25);
+}
+
+/* ============================= */
+/* LEFT CONTROLS */
+/* ============================= */
+
+.controls-left label {
+  margin-right: 25px;
+  font-size: 14px;
+}
+
+.controls-left input,
+.controls-left select {
+  margin-left: 10px;
+  padding: 8px 12px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: 1px solid rgba(82, 39, 255, 0.5);
+  border-radius: 10px;
+}
+
+.controls-left input:focus,
+.controls-left select:focus {
+  outline: none;
+  border-color: #39d353;
+}
+
+/* ============================= */
+/* CENTER */
+/* ============================= */
+
+.controls-center {
+  font-size: 18px;
+}
+
+/* ============================= */
+/* RIGHT */
+/* ============================= */
+
+.controls-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* ============================= */
+/* MIC BUTTON */
+/* ============================= */
+
+.mic-btn {
+  background: linear-gradient(135deg, #5227ff, #7a4aff);
+  border: none;
+  padding: 14px;
+  border-radius: 50%;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.mic-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(82, 39, 255, 0.6);
+}
+
+.mic-btn.active {
+  background: linear-gradient(135deg, #39d353, #1db954);
+  box-shadow: 0 0 15px rgba(57, 211, 83, 0.7);
+}
+
+/* ============================= */
+/* CAPTION */
+/* ============================= */
+
+.caption-box {
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(82, 39, 255, 0.4);
+  padding: 10px 15px;
+  border-radius: 12px;
+  min-width: 220px;
+  max-width: 320px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* User speech → green */
+.speech-user {
+  color: #39d353;
+  font-weight: 600;
+  font-size: 13px;
+  word-break: break-word;
+}
+
+/* AI feedback → red */
+.speech-ai {
+  color: #ff5555;
+  font-weight: 600;
+  font-size: 13px;
+  word-break: break-word;
+}
+
+/* Listening pulse indicator */
+.listening-indicator {
+  color: #7aefff;
+  font-size: 12px;
+  animation: pulse 1s infinite alternate;
+}
+@keyframes pulse {
+  from { opacity: 0.5; }
+  to   { opacity: 1; }
+}
+
+/* Pose feedback overlays */
+.feedback-good {
+  color: #39d353;
+  font-weight: 700;
+  font-size: 15px;
+  margin-top: 6px;
+}
+.feedback-bad {
+  color: #ff5555;
+  font-weight: 700;
+  font-size: 15px;
+  margin-top: 6px;
+}
+
+/* ============================= */
+/* TIMER */
+/* ============================= */
+
+.timer-container {
+  text-align: center;
+}
+
+.timer-display {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.timer-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.timer-btn {
+  background: linear-gradient(135deg, #5227ff, #7a4aff);
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.timer-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(82, 39, 255, 0.6);
+}
+
+.timer-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ============================= */
+/* GOAL COMPLETE BANNER           */
+/* ============================= */
+
+.goal-complete-banner {
+  background: linear-gradient(135deg, #1db954, #39d353);
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  padding: 18px 30px;
+  border-radius: 16px;
+  margin-bottom: 28px;
+  box-shadow: 0 0 30px rgba(57, 211, 83, 0.5);
+  animation: goalPop 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes goalPop {
+  0%   { transform: scale(0.85); opacity: 0; }
+  60%  { transform: scale(1.04); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+/* Save prompt inside goal banner */
+.save-prompt {
+  margin-top: 14px;
+}
+
+.save-session-btn {
+  background: rgba(255,255,255,0.15);
+  border: 1.5px solid rgba(255,255,255,0.5);
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 10px 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.save-session-btn:hover {
+  background: rgba(255,255,255,0.28);
+  transform: scale(1.04);
+}
+
+.save-session-btn.save-login {
+  background: rgba(255,85,85,0.25);
+  border-color: #ff5555;
+}
+
+.save-confirmed {
+  margin-top: 10px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* ============================= */
+/* REP PROGRESS DISPLAY           */
+/* ============================= */
+
+.rep-progress {
+  font-size: 15px;
+  font-weight: 600;
+  color: #a78bfa;
+  margin-left: 10px;
+}
+
+/* ============================= */
+/* PAUSED OVERLAY                 */
+/* ============================= */
+
+.paused-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+  border-radius: 20px;
+  z-index: 10;
+  gap: 12px;
+}
+
+.start-workout-btn {
+  background: linear-gradient(135deg, #5227ff, #7a4aff);
+  border: none;
+  padding: 14px 32px;
+  border-radius: 12px;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 8px;
+}
+
+.start-workout-btn:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 20px rgba(122, 74, 255, 0.6);
+}
