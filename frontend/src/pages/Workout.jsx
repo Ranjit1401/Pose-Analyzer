@@ -150,7 +150,7 @@ export default function Workout() {
     if (!token) return;
     const finalReps = poseRepCount.current || completedReps;
     try {
-      const res = await fetch("http://localhost:8000/api/session", {
+      const res = await fetch('https://postureai-backend.onrender.com/api/session', {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

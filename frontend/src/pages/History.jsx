@@ -17,7 +17,7 @@ export default function History() {
       return;
     }
 
-    fetch("http://localhost:8000/api/sessions", {
+    fetch('https://postureai-backend.onrender.com/api/sessions', {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((res) => res.json())

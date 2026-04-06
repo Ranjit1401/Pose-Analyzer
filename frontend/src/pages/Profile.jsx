@@ -38,7 +38,7 @@ export default function Profile() {
 
         const token = localStorage.getItem("token");
 
-        const res = await fetch("http://localhost:8000/api/profile", {
+        const res = await fetch('https://postureai-backend.onrender.com/api/profile', {
           headers: {
             Authorization: `Bearer ${token}`
           }
