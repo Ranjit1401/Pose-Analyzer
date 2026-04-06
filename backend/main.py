@@ -43,9 +43,14 @@ app = FastAPI()
 # CORS
 # =========================
 
+origins = [
+    "https://pose-analyzer.vercel.app",  # your frontend
+    "http://localhost:5173",             # local dev
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=origins,  # or ["*"] for testing
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
